@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+    .background--custom {
+      background: linear-gradient(90deg, #a4baf5, #D4DCB1, #DC2E2C);
+      background-size: 300% 300%;
+      animation: gradient 4s alternate infinite;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+    @keyframes gradient {
+      0% {
+        background-position: 0%;
+      }
+      100% {
+        background-position: 100%;
+      }
+    }
+
+.text-gradient {
+  @apply text-transparent bg-clip-text;
+  background: linear-gradient(70deg, #322d2f, rgb(43, 132, 117), #dee434);
+   animation: gradient 4s alternate infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.caveat-style {
+  font-family: "Caveat", serif;
+  font-weight: 700;
+  font-style: normal;
+};
