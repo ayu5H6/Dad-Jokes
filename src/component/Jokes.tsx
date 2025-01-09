@@ -26,12 +26,12 @@ const Jokes = () => {
 
   return (
     <>
-      <div className=" flex flex-col items-center border-pink-600 border-2 m-0 p-0 h-screen w-screen background--custom">
+      <div className=" flex flex-col items-center  m-0 p-0  min-h-screen">
         <div>
           <h1 className=" text-6xl m-4 text-gradient">RANDOM DAD JOKES</h1>
         </div>
 
-        <div className="m-4">
+        <div className="m-4 p-4">
           <button
             onClick={fetchInfo}
             className="  bg-gradient-to-r from-teal-800 to-blue-500 hover:from-rose-500 hover:to-fuchsia-500 p-4 rounded-lg"
@@ -42,7 +42,7 @@ const Jokes = () => {
           </button>
         </div>
 
-        <div className="flex justify-between w-auto">
+        <div className="flex sm:flex-row justify-between  h-screen w-screen">
           <div
             className="pointer-events-none"
             style={{
@@ -58,8 +58,17 @@ const Jokes = () => {
               style={{ position: "absolute" }}
             ></iframe>
           </div>
-          <div className=" m-4  text-center flex-1 caveat-style text-5xl items-center justify-center flex text-stone-800">
-            <p>{jokes ? jokes.joke : "Loading..."}</p>
+          <div
+            className=" m-4  text-center flex-1 caveat-style sm:text-sm md:text-5xl items-center justify-center flex text-stone-800 "
+            style={{
+              wordBreak: "break-word", // Ensure text breaks properly
+              overflowWrap: "break-word", // Support for older browsers
+              maxWidth: "90%", // Constrain the joke container width
+              maxHeight: "400px", // Prevent vertical overflow
+            
+            }}
+          >
+            <p className=" ">{jokes ? jokes.joke : "Loading..."}</p>
           </div>
 
           <div

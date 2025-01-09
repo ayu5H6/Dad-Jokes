@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 
     .background--custom {
       background: linear-gradient(90deg, #a4baf5, #D4DCB1, #DC2E2C);
       background-size: 300% 300%;
@@ -19,7 +20,7 @@
       100% {
         background-position: 100%;
       }
-    }
+    } */
 
 .text-gradient {
   @apply text-transparent bg-clip-text;
