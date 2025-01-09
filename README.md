@@ -5,7 +5,6 @@ Welcome to the Dad Joke Website! A fun and lighthearted place where you can find
 
 ## Features
 - A collection of hilarious dad jokes.
-- Search functionality to find specific jokes.
 - Share jokes with friends and family.
 - Clean and responsive user interface.
 
